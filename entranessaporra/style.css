@@ -1,69 +1,85 @@
-
 body {
-    font-family: 'Minecraftia', sans-serif;
-    background-color: #f2f2f2;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .container {
-    background: linear-gradient(to bottom, rgba(49, 49, 49, 0.103), rgba(0, 0, 0, 0.37)); /* Degradê escuro */
-    color: white; /* Para texto legível */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
-    width: 300px;
+  font-family: 'Minecraftia', sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  background-image: url('https://picsum.photos/200/300'); /* imagem de fundo */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Para evitar rolagem */
+  position: relative; /* Para permitir que o fundo seja posicionado corretamente */
+}
+.fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://picsum.photos/200/300'); /* imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  position: relative;
+  background: white; /* Fundo branco para o formulário */
+  color: black; /* Cor do texto */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  margin: 50px auto;
+}
+
+.html {
+  background-image: url('https://cdn.discordapp.com/attachments/1007091530047180850/1289761710252494848/maxresdefault.png');
 }
 
 h2 {
-    font-family: 'Minecraftia', sans-serif;
-    color: black; /* Define a cor do texto como preto */
+  font-family: 'Minecraftia', sans-serif;
 }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  label {
-    margin-bottom: 1px;
-  }
-  
-  input[type="text"], input[type="number"] {
-    width: 100%;
-    font-family: 'Minecraftia', Arial, sans-serif;
-    height: 40px;
-    margin-bottom: 1px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-  
+
+label {
+  margin-bottom: 1px;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  font-family: 'Minecraftia', Arial, sans-serif;
+  height: 40px;
+  margin-bottom: 1px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 button[type="submit"] {
-    width: 40px; /* Ajuste para a largura desejada */
-    height: 40px; /* Deve ser igual à largura */
-    background-color: #ffffff;
-    color: #fff;
-    scale: 1.5;
-    border: none;
-    border-radius: 5px; /* Remova ou mantenha, dependendo do efeito desejado */
-    cursor: pointer;
-    padding: 0; /* Remova o preenchimento */
-    transition: transform 0.2s; /* Adiciona uma transição suave */
+  width: 40px; /* Ajuste para a largura desejada */
+  height: 40px; /* Deve ser igual à largura */
+  background-color: #ffffff;
+  color: #000; /* Cor do texto do botão */
+  scale: 1.5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0; /* Remova o preenchimento */
+  transition: transform 0.2s; /* Adiciona uma transição suave */
 }
 
 button[type="submit"]:hover {
-    background-color: #3e8e41;
-    transform: scale(1.1); /* Aumenta o tamanho em 10% */
+  background-color: #3e8e41;
+  transform: scale(1.1); /* Aumenta o tamanho em 10% */
 }
-  
-  
-  #error-message {
-    text-align: center;
-    color: red;
-    margin-bottom: 10px; /* Use este espaço para separar a mensagem de erro */
+
+#error-message {
+  text-align: center;
+  color: red;
+  margin-bottom: 10px; /* Use este espaço para separar a mensagem de erro */
 }
